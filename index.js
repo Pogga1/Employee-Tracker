@@ -48,7 +48,7 @@ const informationPrompt = () => {
           viewEmployees();
           break;
 
-        case "View ALL Roles":
+        case "View All Roles":
           viewRoles();
           break;
 
