@@ -244,10 +244,10 @@ const updateRole = () => {
               params[0] = role;
               params[1] = employee;
 
-              const sql = `UPDATE employee SET role_id = ? WHERE id = ?`;
+              const sql = `UPDATE employees SET role_id = ? WHERE id = ?`;
               mysql.query(sql, params, (err, result) => {
                 if (err) throw err;
-                console.log("Employee has been updated!");
+                console.log("Employees has been updated!");
                 console.table(result);
                 informationPrompt();
               });
