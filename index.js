@@ -189,7 +189,8 @@ const addRole = () => {
         title: res.roleName,
         salary: res.salary,
       });
-      console.log(`Successfully added ${res.roleName} to database`);
+      console.log(`Successfully added ${res.roleName} to database`
+      );
       informationPrompt();
     });
 };
