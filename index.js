@@ -15,11 +15,11 @@ mysql.connect(function(err) {
         throw err;
     } else {
         console.log('Connected Succesfully');
-        employeePrompt();
+        informationPrompt();
     }
 });
 
-const employeePrompt = () => { 
+const informationPrompt = () => { 
     return inquirer.prompt([{
         name: 'action',
         type: 'list',

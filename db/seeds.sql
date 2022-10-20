@@ -1,20 +1,27 @@
 INSERT INTO departments(id, name)
-VALUES (1, 'Board'),
-       (2, 'Engineering'),
-       (3, 'Finance'),
-       (4, 'Legal'),
-       (5, 'Sales');
+VALUES (1, 'Engineering'),
+       (2, 'Finance'),
+       (3, 'Legal'),
+       (4, 'Sales');
 
 INSERT INTO roles (department_id, title, salary)
-VALUES (1, "CEO", 500000),
-       (2, "Lead Engineer", 200000),
-       (2, "Software Engineer", 130000),
-       (3, "Accountant Manager", 160000),
-       (3, "Accountant", 100000),
-       (4, "Legal Team Lead", 300000),
-       (4, "Lawyer", 200000),
-       (5, "Sales Lead", 100000),
-       (5, "Salesperson", 80000);
+VALUES (1, "Lead Engineer", 150000),
+       (1, "Software Engineer", 120000),
+       (2, "Accountant Manager", 160000),
+       (2, "Accountant", 125000),
+       (3, "Legal Team Lead", 250000),
+       (3, "Lawyer", 190000),
+       (4, "Sales Lead", 100000),
+       (4, "Salesperson", 80000);
 
 INSERT INTO employees (first_name, last_name, role_id, manager_id)
-VALUES
+VALUES (Ashley, Rodriguez, 1, 1),
+       (Andrew, Eysoldt, 2, 2),
+       (Kunal, Singh, 3, 1),
+       (Malia, Brown, 4, 3),
+       (Sarah, Lourd, 5, 1),
+       (Tom, Allen, 6, 4),
+       (Kevin, Tupik, 7, 1),
+       (Mike, Chan, 8, 5);
+       
+       
