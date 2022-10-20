@@ -1,35 +1,31 @@
-const inquirer = require('inquirer');
-const mysql = require('mysql2');
+const inquirer = import('inquirer');
+const Mysql = require('mysql2');
 const cTable = require('console.table');
 require('dotenv').config();
 
-const database = mysql.createConnection(
-   process.env.DB_HOST,
-   process.env.DB_USER,
-   process.env.DB_PASSWORD,
-   {
-    host: 'localhost',
-    database: 'employeeTracker_db',
-    port: 3306
-   }
-);
+const mysql = Mysql.createConnection({
+   host: 'localhost',
+   user: process.env.DB_USER,
+   password: process.env.DB_PASSWORD,
+   database: process.env.DB_NAME
+});
 
-database.connect(function(err) {
+mysql.connect(function(err) {
     if(err) {
         throw err;
     } else {
         console.log('Connected Succesfully');
-        emmployeePrompt();
+        employeePrompt();
     }
 });
 
-const emmployeePrompt = async () => { 
-    await inquirer.prompt({
+const employeePrompt = () => { 
+    return inquirer.prompt([{
         name: 'action',
         type: 'list',
         message: 'What would you like to do?',
         choices: ["View All Departments", "View All Employees", "View All Roles", "Add Department", "Add Employee", "Add Role", "Update Employee Role"]
-    })  
+    }])  
       .then(function(next) 
     {
         switch (next.action){
