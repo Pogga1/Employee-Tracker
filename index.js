@@ -237,7 +237,7 @@ const updateRole = () => {
               },
             ])
             .then((res) => {
-              const role = res.role;
+              const role = res.roles;
               params.push(role);
 
               let employee = params[0];
