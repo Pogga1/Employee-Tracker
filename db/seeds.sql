@@ -15,13 +15,13 @@ VALUES (1, "Lead Engineer", 150000),
        (4, "Salesperson", 80000);
 
 INSERT INTO employees (first_name, last_name, role_id, manager_id)
-VALUES (Ashley, Rodriguez, 1, 1),
-       (Andrew, Eysoldt, 2, 2),
-       (Kunal, Singh, 3, 1),
-       (Malia, Brown, 4, 3),
-       (Sarah, Lourd, 5, 1),
-       (Tom, Allen, 6, 4),
-       (Kevin, Tupik, 7, 1),
-       (Mike, Chan, 8, 5);
+VALUES ('Ashley', 'Rodriguez', 1, 1),
+       ('Andrew', 'Eysoldt', 2, 2),
+       ('Kunal', 'Singh', 3, 1),
+       ('Malia', 'Brown', 4, 3),
+       ('Sarah', 'Lourd', 5, 1),
+       ('Tom', 'Allen', 6, 4),
+       ('Kevin', 'Tupik', 7, 1),
+       ('Mike', 'Chan', 8, 5);
        
        

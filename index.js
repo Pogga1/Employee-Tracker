@@ -77,6 +77,7 @@ const viewDepartments = () => {
       console.log(err);
     } else {
       console.log(res);
+      console.table(res);
       informationPrompt();
     }
   });
@@ -88,6 +89,7 @@ const viewEmployees = () => {
       console.log(err);
     } else {
       console.log(res);
+      console.table(res);
       informationPrompt();
     }
   });
@@ -99,6 +101,7 @@ const viewRoles = () => {
       console.log(err);
     } else {
       console.log(res);
+      console.table(res)
       informationPrompt();
     }
   });
@@ -217,10 +220,10 @@ const updateRole = () => {
 
         const roleSql = `SELECT * FROM roles`;
 
-        mysql.query(roleSql, (err, data) => {
+        mysql.query(roleSql, (err, res) => {
           if (err) throw err;
 
-          const roles = data.map(({ id, title }) => ({
+          const roles = res.map(({ id, title }) => ({
             name: title,
             value: id,
           }));
@@ -245,7 +248,7 @@ const updateRole = () => {
               mysql.query(sql, params, (err, result) => {
                 if (err) throw err;
                 console.log("Employee has been updated!");
-
+                console.table(result);
                 informationPrompt();
               });
             });
